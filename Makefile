@@ -1,5 +1,6 @@
 all: guard-version
 	docker build --build-arg "VERSION=${version}" -t courtapi/playwright:${version} .
+	docker push courtapi/playwright:${version}
 
 
 guard-%:
